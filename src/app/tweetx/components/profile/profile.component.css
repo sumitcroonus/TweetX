@@ -1,0 +1,109 @@
+.feed {
+  overflow-y: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.feed::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.container {
+  margin: 2rem auto;
+  width: 50%;
+  height: calc(100vh - 25vh);
+}
+
+.card {
+  display: flex;
+  margin-top: 2rem;
+}
+
+.avtar {
+  margin-top: 1rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.profile-picture {
+  border: 1px solid rgb(93, 103, 110);
+  border-radius: 50%;
+  width: 7rem;
+  height: 7rem;
+}
+
+.content {
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  margin-left: 1rem;
+  width: calc(100% - 5.6rem - 7rem);
+}
+
+.name {
+  font-size: 2rem;
+  color: rgb(93, 103, 110);
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.time {
+  display: flex;
+  margin-top: 1rem;
+}
+
+.profile-info {
+  margin-right: 1rem;
+  color: rgb(93, 103, 110);
+}
+
+.profile-options {
+  border-top: 1px solid rgb(246, 246, 246);
+  margin-top: 1rem;
+}
+
+.tabs {
+  margin: 1rem 5rem;
+  margin-bottom: 2rem;
+}
+
+.tabs ul {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  padding: 0;
+  margin: -0.5rem 0;
+}
+
+.tabs ul li {
+  display: inline;
+  margin: 0.5rem;
+}
+
+.tabs ul li a {
+  padding: 1rem;
+  padding-bottom: 0.5rem;
+  text-decoration: none;
+  font-size: 1rem;
+  color: rgb(93, 103, 110);
+  position: relative;
+  cursor: pointer;
+}
+
+.active {
+  border-top: 2px solid rgb(93, 103, 110);
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    flex-direction: column;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  .feed {
+    padding: 1rem;
+  }
+}

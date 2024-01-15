@@ -1,0 +1,16 @@
+.feed {
+  overflow-y: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.feed::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.container {
+  margin: 2rem auto;
+  width: 50%;
+  height: calc(100vh - 25vh);
+}

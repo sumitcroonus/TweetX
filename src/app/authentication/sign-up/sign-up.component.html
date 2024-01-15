@@ -1,0 +1,60 @@
+<div class="container">
+  <h1 class="app-name">TweetX</h1>
+  <button [routerLink]="'/login'" class="secondary-button">Login</button>
+
+  <h1 class="login">Create Account</h1>
+  <form [formGroup]="signupForm" (ngSubmit)="register()">
+    <div class="login-input">
+      <input type="text" placeholder="Name" formControlName="name" />
+    </div>
+    <div class="login-input">
+      <input type="text" placeholder="Email" formControlName="email" />
+    </div>
+    <p
+      class="error-message"
+      *ngIf="
+        signupForm.get('email')?.invalid && signupForm.get('email')?.touched
+      "
+    >
+      Invalid email. Please enter a valid email
+    </p>
+    <div class="login-input">
+      <input
+        type="password"
+        placeholder="Password"
+        formControlName="password"
+      />
+    </div>
+    <p
+      class="error-message"
+      *ngIf="
+        signupForm.get('password')?.invalid &&
+        signupForm.get('password')?.touched
+      "
+    >
+      Password must be 6 characters long
+    </p>
+    <div class="login-input">
+      <input
+        type="password"
+        placeholder="Confirm Password"
+        formControlName="confirm"
+      />
+    </div>
+    <p
+      class="error-message"
+      *ngIf="
+        signupForm.get('password')?.value !==
+          signupForm.get('confirm')?.value &&
+        signupForm.get('confirm')?.dirty &&
+        signupForm.get('password')?.touched
+      "
+    >
+      Passwords do not match.
+    </p>
+    <div class="login-actions">
+      <p></p>
+      <button class="primary-button" type="submit">Sign up</button>
+    </div>
+  </form>
+</div>

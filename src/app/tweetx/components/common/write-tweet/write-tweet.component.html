@@ -1,0 +1,28 @@
+<div class="container">
+  <button class="primary-button" (click)="writePost()" *ngIf="!write">
+    Write
+  </button>
+  <form [formGroup]="tweetForm" *ngIf="write">
+    <div class="tweet-input">
+      <textarea
+        placeholder="Whats on your mind..."
+        formControlName="post"
+      ></textarea>
+    </div>
+    <div class="tweet-actions">
+      <p></p>
+      <div>
+        <button class="primary-button" type="submit" (click)="postTweet()">
+          Post
+        </button>
+        <button
+          class="primary-button"
+          style="margin-left: 1rem"
+          (click)="writePost()"
+        >
+          Cancel
+        </button>
+      </div>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,62 @@
+.card {
+  display: flex;
+  margin-top: 2rem;
+  border-bottom: 1px solid rgb(246, 246, 246);
+  overflow: hidden;
+}
+
+.avtar {
+  margin-top: 1rem;
+  margin-left: 2rem;
+}
+
+.profile-picture {
+  border: 1px solid rgb(93, 103, 110);
+  border-radius: 50%;
+  width: 3.5rem;
+  height: 3.5rem;
+}
+
+.content {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-left: 1rem;
+  width: 100%;
+}
+
+.description {
+  margin-top: 0.7rem;
+  color: rgb(93, 103, 110);
+}
+
+.name {
+  font-size: 2rem;
+  color: rgb(93, 103, 110);
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.follow-action-botton {
+  float: right;
+  margin: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .follow-action-botton {
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+  }
+  .name {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .name {
+    font-size: 1.3rem;
+  }
+}

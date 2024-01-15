@@ -1,0 +1,78 @@
+.card {
+  display: flex;
+  margin-top: 2rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  overflow: hidden;
+}
+
+.avtar {
+  margin-top: 1rem;
+  margin-left: 2rem;
+}
+
+.profile-picture {
+  border: 1px solid rgb(93, 103, 110);
+  border-radius: 50%;
+  width: 3.5rem;
+  height: 3.5rem;
+}
+
+.content {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-left: 1rem;
+  width: calc(100%);
+}
+
+.description {
+  margin-top: 0.7rem;
+  color: rgb(93, 103, 110);
+}
+
+.name {
+  font-size: 2rem;
+  color: rgb(93, 103, 110);
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.time {
+  text-align: right;
+  color: #888;
+}
+
+.background-circle {
+  margin-left: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle {
+  background-color: rgb(255, 116, 141);
+  height: 5rem;
+  width: 2.5rem;
+  border-bottom-left-radius: 5rem;
+  border-top-left-radius: 5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    width: 80%;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+  }
+  .time {
+    margin-right: 1rem;
+  }
+
+  .circle {
+    height: 2.5rem;
+    width: 5rem;
+    border-top-left-radius: 5rem;
+    border-top-right-radius: 5rem;
+    border-bottom-left-radius: 0;
+  }
+}

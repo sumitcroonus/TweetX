@@ -1,0 +1,21 @@
+<div *ngIf="!showMessage">
+  <div class="card" *ngFor="let item of postData">
+    <div class="avtar">
+      <div class="profile-picture"></div>
+    </div>
+    <div class="content">
+      <div class="name">{{ item.postedBy | titlecase }}</div>
+      <div class="time">{{ item.date | date }}</div>
+      <div class="description">{{ item.post }}</div>
+    </div>
+    <div class="background-circle">
+      <div class="circle"></div>
+    </div>
+  </div>
+</div>
+<div *ngIf="showMessage && type == 'feed'" style="margin-top: 2rem">
+  Your feed is empty! Follow friend to see their tweets.
+</div>
+<div *ngIf="showMessage && type == 'profile'" style="margin-top: 2rem">
+  You have zero posts.
+</div>

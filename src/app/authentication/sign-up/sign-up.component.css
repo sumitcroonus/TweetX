@@ -1,0 +1,68 @@
+.container {
+  padding-top: 3rem;
+  margin-left: 6rem;
+  height: 100vh;
+  background: url("../../../assets/login.png") no-repeat right center fixed;
+  background-size: contain;
+}
+
+.login {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin-top: 3rem;
+  font-size: 2.5rem;
+  color: rgb(93, 103, 110);
+  margin-bottom: 1rem;
+}
+
+.login-input {
+  display: flex;
+  margin-top: 2rem;
+  padding: 0.7rem;
+  width: 25rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(249, 249, 249);
+}
+
+.login-input input {
+  border: none;
+  background-color: transparent;
+  width: 100%;
+  outline: none;
+  font-size: 1rem;
+}
+
+input:focus {
+  outline: 1px solid rgb(93, 103, 110);
+}
+
+.login-actions {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  width: 25rem;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.7rem;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    margin: 2rem 1rem;
+    background: url("../../../assets/login.png") no-repeat bottom center
+      fixed;
+    background-size: contain;
+  }
+
+  .login-input {
+    width: 80%;
+  }
+
+  .login-actions {
+    width: 100%;
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,39 @@
+/* You can add global styles to this file, and also import other style files */
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow: hidden;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.app-name {
+  color: rgb(255, 116, 141);
+}
+
+.primary-button {
+  height: 2.5rem;
+  width: 7rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: white;
+  background-color: rgb(255, 116, 141);
+  border: none;
+  cursor: pointer;
+}
+
+.secondary-button {
+  height: 2.5rem;
+  width: 10rem;
+  background-color: transparent;
+  font-size: 15px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  border: 1px solid black;
+  cursor: pointer;
+}

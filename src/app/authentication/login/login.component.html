@@ -1,0 +1,43 @@
+<div class="container">
+  <h1 class="app-name">TweetX</h1>
+  <button [routerLink]="'/register'" class="secondary-button">
+    Create Account
+  </button>
+
+  <h1 class="login">Login</h1>
+  <form [formGroup]="loginForm" (ngSubmit)="login()">
+    <div class="login-input">
+      <input type="text" placeholder="Email" formControlName="email" />
+    </div>
+    <p
+      class="error-message"
+      *ngIf="loginForm.get('email')?.invalid && loginForm.get('email')?.touched"
+    >
+      Invalid email. Please enter a valid email
+    </p>
+    <div class="login-input">
+      <input
+        type="{{ visiblity ? 'text' : 'password' }}"
+        placeholder="Password"
+        formControlName="password"
+      />
+      <mat-icon
+        style="color: grey; width: 30px"
+        (click)="togglePasswordVisiblity()"
+        >{{ visiblity ? "visibility" : "visibility_off" }}</mat-icon
+      >
+    </div>
+    <p
+      class="error-message"
+      *ngIf="
+        loginForm.get('password')?.invalid && loginForm.get('password')?.touched
+      "
+    >
+      Invalid password. Passwords must be more than 6 characters
+    </p>
+    <div class="login-actions">
+      <p (click)="forgotPassword()">Forgot Password?</p>
+      <button class="primary-button" type="submit">Login</button>
+    </div>
+  </form>
+</div>

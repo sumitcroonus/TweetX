@@ -1,0 +1,7 @@
+<div class="feed">
+  <div class="container">
+    <app-write-tweet (postEvent)="postTweet($event)"></app-write-tweet>
+    <app-post-card [postData]="allPosts" [type]="'feed'"></app-post-card>
+    <div style="height: 5rem"></div>
+  </div>
+</div>

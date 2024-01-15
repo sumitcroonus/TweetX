@@ -1,0 +1,37 @@
+<div *ngIf="!showMessage">
+  <div class="card" *ngFor="let item of userData">
+    <div class="avtar">
+      <div class="profile-picture"></div>
+    </div>
+    <div class="content">
+      <div class="name">{{ item.username | titlecase }}</div>
+      <div class="description">
+        Following {{ item.following?.length ? item.following?.length : 0 }}
+      </div>
+    </div>
+    <div class="follow-action-botton">
+      <button
+        *ngIf="!myData?.following?.includes(item.uid)"
+        class="primary-button"
+        (click)="followUser(item.uid)"
+      >
+        Follow
+      </button>
+      <button
+        *ngIf="myData?.following?.includes(item.uid)"
+        class="primary-button"
+        style="background-color: transparent; color: rgb(93, 103, 110)"
+        (click)="followUser(item.uid)"
+      >
+        Following
+      </button>
+    </div>
+  </div>
+</div>
+<div *ngIf="showMessage && type == 'users'">No users Registered!</div>
+<div *ngIf="showMessage && type == 'followers'">
+  You don't have any followers yet!
+</div>
+<div *ngIf="showMessage && type == 'following'">
+  Follow friends to see them here!
+</div>

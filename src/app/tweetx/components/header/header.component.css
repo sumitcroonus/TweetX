@@ -1,0 +1,48 @@
+.container {
+  height: 10vh;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 4px 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navigation {
+  display: flex;
+  margin: auto 0;
+  margin-right: 20rem;
+}
+
+.navigation-item {
+  margin: 0 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: rgb(93, 103, 110);
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  cursor: pointer;
+}
+
+.navigation-title {
+  margin-left: 10rem;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+.link-active {
+  color: rgb(255, 116, 141);
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .navigation {
+    margin-right: 0;
+  }
+
+  .navigation-title {
+    margin: 1rem 0;
+    text-align: center;
+  }
+}

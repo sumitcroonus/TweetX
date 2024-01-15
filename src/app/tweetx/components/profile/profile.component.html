@@ -1,0 +1,81 @@
+<div class="feed">
+  <div class="container">
+    <div class="card">
+      <div class="avtar">
+        <div class="profile-picture"></div>
+      </div>
+      <div class="content" *ngIf="myProfileDetail">
+        <div class="name">{{ myProfileDetail.username | titlecase }}</div>
+        <div class="time">
+          <div class="profile-info">
+            Posts: {{ myPosts.length ? myPosts.length : 0 }}
+          </div>
+          <div class="profile-info">
+            Followers:
+            {{
+              myProfileDetail.followers?.length
+                ? myProfileDetail.followers?.length
+                : 0
+            }}
+          </div>
+          <div class="profile-info">
+            Following:
+            {{
+              myProfileDetail.following?.length
+                ? myProfileDetail.following?.length
+                : 0
+            }}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="profile-options">
+      <div class="tabs">
+        <ul>
+          <li>
+            <a
+              (click)="showContent('posts')"
+              [class.active]="selectedContent === 'posts'"
+              >Posts</a
+            >
+          </li>
+          <li>
+            <a
+              (click)="showContent('followers')"
+              [class.active]="selectedContent === 'followers'"
+              >Followers</a
+            >
+          </li>
+          <li>
+            <a
+              (click)="showContent('following')"
+              [class.active]="selectedContent === 'following'"
+              >Following</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div [ngSwitch]="selectedContent">
+      <div *ngSwitchCase="'posts'">
+        <app-post-card [postData]="myPosts" [type]="'profile'"></app-post-card>
+      </div>
+      <div *ngSwitchCase="'followers'">
+        <app-user-card
+          [userData]="followers"
+          [myData]="myProfileDetail"
+          [type]="'followers'"
+        ></app-user-card>
+      </div>
+      <div *ngSwitchCase="'following'">
+        <app-user-card
+          [userData]="following"
+          [myData]="myProfileDetail"
+          [type]="'following'"
+        ></app-user-card>
+      </div>
+    </div>
+
+    <div style="height: 5rem"></div>
+  </div>
+</div>
