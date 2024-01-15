@@ -67,6 +67,10 @@
   .time {
     margin-right: 1rem;
   }
+  
+  .description {
+    margin-right: 1rem;
+  }
 
   .circle {
     height: 2.5rem;
@@ -74,5 +78,11 @@
     border-top-left-radius: 5rem;
     border-top-right-radius: 5rem;
     border-bottom-left-radius: 0;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .name {
+    font-size: 1.3rem;
   }
 }

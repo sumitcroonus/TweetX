@@ -106,4 +106,17 @@
   .feed {
     padding: 1rem;
   }
+
+  .name{
+    width: 20rem;
+    font-size: 2rem;
+  }
+  
+}
+
+@media screen and (max-width: 1000px) {
+
+  .name{
+    font-size: 1.7rem;
+  }
 }
